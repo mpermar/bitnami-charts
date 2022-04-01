@@ -1,22 +1,22 @@
 {
   "phases": {
-    "package": {
+    "verify": {
       "context": {
         "resources": {
-          "url": "{SHA_ARCHIVE}",
-          "path": "{CHART_PATH}"
+          "url": "https://codeload.github.com/mpermar/bitnami-charts/zip/refs/heads/master",
+          "path": "{TESTS_PATH}"
         }
       },
-      "actions": [
-        {
-          "action_id": "helm-package"
-        },
-        {
-          "action_id": "helm-lint"
+      "application": {
+        "kind": "HELM",
+        "details": {
+          "name": "{PRODUCT_NAME}",
+          "repository": {
+            "url": "{OCI_URI}"
+          },
+          "version": "{PRODUCT_VERSION}"
         }
-      ]
-    },
-    "verify": {
+      },
       "actions": [
         {
           "action_id": "trivy",
