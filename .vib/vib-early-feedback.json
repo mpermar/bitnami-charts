@@ -21,7 +21,6 @@
                         "version": "{PRODUCT_VERSION}"
                 }
             },
-            "threshold": "CRITICAL",
             "vuln_type": [
               "OS"
             ]
