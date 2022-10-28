@@ -6,25 +6,25 @@ metadata:
 chart:
   name: wordpress
   version: 10.3.6
-  location: oci://an-oci-repo.com/bitnami/wordpress:10.3.6
-  digest: sha256:60f13c95c1a2dd37f25fe31e9cf3525704a544261a0b4c6b36f212990911b2c9
+  location: oci://an-oci-repo.com/bitnami/rabbitmq-cluster-operator:3.1.0
+  digest: sha256:125113b35efe765c89a8ed49593e719532318d26828c58e26b26dd7c4c28a673
 images:
-  - name: wordpress
-    image: docker.io/bitnami/wordpress:6.0.2-debian-11-r9
+  - name: rabbitmq
+    image: docker.io/bitnami/rabbitmq:3.10.8-debian-11-r0
     digest: sha256:b4cb055a643d1d51d1678f3e011cf008b227852bc0a4118126deeed844ccfb6a
-    chart: wordpress
-  - name: bitnami-shell
-    image: docker.io/bitnami/bitnami-shell:11-debian-11-r37
+    chart: rabbitmq
+  - name: rmq-default-credential-updater
+    image: docker.io/bitnami/rmq-default-credential-updater:1.0.2-scratch-r9
     digest: sha256:0946f1d16c010bed0a47e3c09ff193d898c868044bb4c1b037c83b7c53c26deb
-    chart: wordpress
-  - name: apache-exporter
-    image: docker.io/bitnami/apache-exporter:0.11.0-debian-11-r42
+    chart: rabbitmq
+  - name: rabbitmq-cluster-operator
+    image: docker.io/bitnami/rabbitmq-cluster-operator:2.0.0-scratch-r0
     digest: sha256:ea4aa97834500297e4252f5f98492c52a7bfd1993bd5ef4e485ae84996b1c63a
-    chart: wordpress
-  - name: memcached
-    image: docker.io/bitnami/memcached:1.6.17-debian-11-r6
+    chart: rabbitmq
+  - name: rmq-messaging-topology-operator
+    image: docker.io/bitnami/rmq-messaging-topology-operator:1.8.0-scratch-r2
     digest: sha256:337a65b5c6e98e4f91606caf66b09b40b21f30b0a67749d5aa705eca1d501be5
-    chart: memcached
+    chart: rabbitmq
   - name: bitnami-shell
     image: docker.io/bitnami/bitnami-shell:11-debian-11-r34
     digest: sha256:fdc0aa4a0b69ff8fcd0d2a553fe78be432b891569208c52d97ad8a215569a959
